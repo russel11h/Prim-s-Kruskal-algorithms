@@ -17,7 +17,7 @@ int main() {
    };
    Edge tree[n - 1];  // edge koyta hte pare
    int visited[n] = {0}; // initialy 0 dore nisi
-   visited[0] = 1;  // 1st node k starting nodr dore suru korlam
+   visited[7] = 1;  // 1st node k starting nodr dore suru korlam
    int k = 0;       //koyta edge akn porjonto select hoise
    while (k < n - 1) {
        int min = 99;
@@ -43,10 +43,14 @@ int main() {
        }
    }
    // Output the result
+   int sum;
    cout << "Minimum Spanning Tree Edges:\n";
    for (int i = 0; i < k; ++i) {
        cout << tree[i].u + 1 << " - " << tree[i].v + 1 << " = " << tree[i].val << endl;
 
+       sum= sum+tree[i].val;
+
    }
+   cout<<"Total cost :"<<sum <<endl;
    return 0;
 }
